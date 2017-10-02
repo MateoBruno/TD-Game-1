@@ -1,3 +1,4 @@
 How to add/push files to repo:
+git add 'File.png'
 git commit -a -m "M/D/Y 24HOURTIME"
 git push origin master
