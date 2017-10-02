@@ -1,0 +1,3 @@
+How to add/push files to repo:
+git commit -a -m "M/D/Y 24HOURTIME"
+git push origin master
