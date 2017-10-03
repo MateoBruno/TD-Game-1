@@ -22,11 +22,6 @@ public class ECDrone extends GameObject
 		setPositionY(getPositionY() + vector.getY() * speed);
 		vector.scale(speed);
 
-		/*if(isInViewport() == false)
-		{
-			System.out.println("It's broken.");
-			kill();
-		}*/
 		if(getPositionX() > 154 || getPositionX() < - 154)
 		{
 			kill();

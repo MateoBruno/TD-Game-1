@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 public class Player extends GameObject
 {
 	public Vec2 direction = new Vec2(1.0f, 0.0f);
+	float timer = 0.0f;
 
 	public Player()
 	{
@@ -32,6 +33,7 @@ public class Player extends GameObject
 	}
 	@Override public void update (float dt)
 	{
+		timer += dt;
 		if(InputManager.isPressed(KeyEvent.VK_LEFT) || InputManager.isPressed(KeyEvent.VK_A))
 		{
 			setPositionX(getPositionX() - 2);
@@ -40,8 +42,9 @@ public class Player extends GameObject
 		{
 			setPositionX(getPositionX() + 2);
 		}
-		if(InputManager.isTriggered(KeyEvent.VK_SPACE))
+		if(InputManager.isTriggered(KeyEvent.VK_SPACE) && timer > 0.5)
 		{
+			timer = 0.0f;
 			drop();
 		}
 
