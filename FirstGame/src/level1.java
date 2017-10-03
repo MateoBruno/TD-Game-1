@@ -1,6 +1,10 @@
+import edu.digipen.Game;
+import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
 import edu.digipen.graphics.Graphics;
 import edu.digipen.level.GameLevel;
+
+import java.awt.event.KeyEvent;
 
 public class level1 extends GameLevel
 {
@@ -24,7 +28,10 @@ public class level1 extends GameLevel
 
 	@Override public void update(float v)
 	{
-
+		if(InputManager.isPressed(KeyEvent.VK_ESCAPE))
+		{
+			Game.destroy();
+		}
 	}
 
 	@Override public void uninitialize()
