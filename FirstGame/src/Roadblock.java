@@ -8,6 +8,6 @@ public class Roadblock extends GameObject
 	}
 	@Override public void update (float dt)
 	{
-
+		setRectangleCollider(27, 14);
 	}
 }

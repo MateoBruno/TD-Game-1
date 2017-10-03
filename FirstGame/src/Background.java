@@ -9,7 +9,11 @@ public class Background extends GameObject
 	}
 	@Override public void update (float dt)
 	{
-		float scrollSpeed = 1.0f;
+		float scrollSpeed = 2.5f;
 		setPositionY(getPositionY() - scrollSpeed);
+		if (getPositionY() < -432)
+		{
+			setPositionY(864);
+		}
 	}
 }
