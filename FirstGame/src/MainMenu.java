@@ -1,5 +1,6 @@
 import edu.digipen.Game;
 import edu.digipen.InputManager;
+import edu.digipen.SoundManager;
 import edu.digipen.gameobject.GameObject;
 import edu.digipen.level.GameLevel;
 import edu.digipen.level.GameLevelManager;
@@ -8,14 +9,20 @@ import java.awt.event.KeyEvent;
 
 public class MainMenu extends GameLevel
 {
+	private static boolean True = true;
 	@Override public void create()
 	{
 		GameObject Menu = new Menu();
+		SoundManager.addBackgroundSound("Music","Music.wav",true);
 	}
 
 	@Override public void initialize()
 	{
-
+		if(True)
+		{
+			SoundManager.playBackgroundSound("Music");
+			True=false;
+		}
 	}
 
 	@Override public void update(float v)
